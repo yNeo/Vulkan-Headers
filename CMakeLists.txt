@@ -63,7 +63,7 @@ add_library(Vulkan::Registry ALIAS Vulkan-Registry)
 
 # Installation
 if(NOT VULKAN_HEADERS_SKIP_INSTALL)
-  set(config_install_dir "${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/cmake")
+  set(config_install_dir "${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME}")
   
   set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
   
