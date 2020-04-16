@@ -63,14 +63,14 @@ add_library(Vulkan::Registry ALIAS Vulkan-Registry)
 
 # Installation
 if(NOT VULKAN_HEADERS_SKIP_INSTALL)
-  set(config_install_dir "${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME}")
+  set(config_install_dir "${CMAKE_INSTALL_DATADIR}/cmake/VulkanHeaders")
   
   set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
   
-  set(version_config "${generated_dir}/${PROJECT_NAME}ConfigVersion.cmake")
-  set(project_config "${generated_dir}/${PROJECT_NAME}Config.cmake")
-  set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
-  set(namespace "${PROJECT_NAME}::")
+  set(version_config "${generated_dir}/VulkanHeadersConfigVersion.cmake")
+  set(project_config "${generated_dir}/VulkanHeadersConfig.cmake")
+  set(TARGETS_EXPORT_NAME "VulkanHeadersTargets")
+  set(namespace "Vulkan::")
   
   include(CMakePackageConfigHelpers)
   write_basic_package_version_file(
